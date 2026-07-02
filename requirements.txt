@@ -1,2 +1,9 @@
-streamlit langchain langchain-core langgraph google-generativeai
-pydantic uvloop
+# Python packages used in making :-
+streamlit
+langchain
+langgraph
+langchain-core
+langchain-groq
+json-repair
+pydantic
+typing-extensions
