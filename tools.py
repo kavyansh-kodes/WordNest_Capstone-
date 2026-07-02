@@ -1,8 +1,6 @@
-import os
 import re
 import json
 import random
-from dotenv import load_dotenv
 import streamlit as st
 from json_repair import repair_json
 from langchain_core.tools import tool
@@ -10,8 +8,6 @@ from langchain_core.messages import HumanMessage
 from langchain_groq import ChatGroq
 
 key = st.secrets["GROQ_API_KEY"]
-# load_dotenv()
-# key = os.getenv("GROQ_WORDNEST_KEY")
 translation_model = ChatGroq(model="qwen/qwen3-32b",groq_api_key=key)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 

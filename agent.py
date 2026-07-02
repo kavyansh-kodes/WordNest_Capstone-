@@ -1,5 +1,3 @@
-import os
-from dotenv import load_dotenv
 import asyncio
 import streamlit as st
 from typing import TypedDict, Annotated, Optional, Any
@@ -15,8 +13,6 @@ from profile_tools import (get_user_profile, set_learning_goal, get_learning_goa
 save_learned_words,get_learned_words,get_personalized_words,get_personalized_words_by_difficulty)
 
 key = st.secrets["GROQ_API_KEY"]
-# load_dotenv()
-# key = os.getenv("GROQ_WORDNEST_KEY")
 
 local_tools = [ get_n_random_words, get_n_random_words_by_difficulty_level, translate_words,
 generate_examples_and_text, explain_grammar,
