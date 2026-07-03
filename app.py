@@ -274,9 +274,6 @@ if st.session_state.profile_loaded:
                 if st.session_state.get("weak_practice", False):
                     (update_weak_progress.invoke({"username":st.session_state.username,
                     "language":source_language, "word": q["word"]}))
-                else:
-                    weak_words[q["word"]] = q["correct"]
-
             else:
                 word = q["question"].split("'")[1]
                 weak_words[word] = q["correct"]
