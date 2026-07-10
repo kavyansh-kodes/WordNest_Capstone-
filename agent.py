@@ -165,7 +165,7 @@ If a username is NOT available:
     """)
 
     tools = assistant.tools if hasattr(assistant, "tools") else []
-    llm = ChatGroq(model="qwen/qwen3-32b", groq_api_key=key)
+    llm = ChatGroq(model="openai/gpt-oss-20b", groq_api_key=key)
     llm_with_tools = llm.bind_tools(tools)
     try:
         msgs = [llm_with_tools.invoke([sys_msg] + state["messages"])]

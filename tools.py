@@ -9,7 +9,7 @@ from langchain_core.messages import HumanMessage
 from langchain_groq import ChatGroq
 
 key = st.secrets["GROQ_API_KEY"]
-translation_model = ChatGroq(model="qwen/qwen3-32b",groq_api_key=key)
+translation_model = ChatGroq(model="openai/gpt-oss-20b",groq_api_key=key)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 @tool
